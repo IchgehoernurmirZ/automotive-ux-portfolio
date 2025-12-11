@@ -442,6 +442,239 @@
         grid-template-columns: 1fr;
     }
 }
+        /* Design Iteration Styles */
+.design-iteration {
+    margin: 40px 0;
+}
+
+.design-iteration h4 {
+    color: #764ba2;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.wireframe-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.wireframe-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wireframe-label {
+    font-weight: 700;
+    font-size: 0.9em;
+    padding: 8px 15px;
+    border-radius: 6px 6px 0 0;
+    text-align: center;
+}
+
+.wireframe-label.before {
+    background: #ffe0e0;
+    color: #c92a2a;
+}
+
+.wireframe-label.after {
+    background: #d4edda;
+    color: #28a745;
+}
+
+.wireframe-box {
+    background: white;
+    border: 2px solid #dee2e6;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+    min-height: 400px;
+    position: relative;
+}
+
+/* Wireframe Elements */
+.wire-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 15px;
+}
+
+.wire-text {
+    background: #e9ecef;
+    border-radius: 3px;
+}
+
+.wire-menu {
+    width: 25px;
+    height: 20px;
+    background: linear-gradient(#495057 20%, transparent 20%, transparent 40%, #495057 40%, #495057 60%, transparent 60%, transparent 80%, #495057 80%);
+}
+
+.wire-icon-small {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #495057;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #495057;
+}
+
+.wire-card {
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.wire-card-small {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.wire-image {
+    width: 100%;
+    height: 100px;
+    background: #f1f3f5;
+    border: 2px dashed #adb5bd;
+    border-radius: 4px;
+}
+
+.wire-image-small {
+    width: 60px;
+    height: 60px;
+    background: #f1f3f5;
+    border: 2px dashed #adb5bd;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.wire-button-subtle {
+    padding: 8px 15px;
+    border: 2px solid #adb5bd;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #495057;
+    text-align: center;
+    background: white;
+}
+
+.wire-button-primary {
+    padding: 8px 15px;
+    background: #667eea;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wire-compare-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f8f9fa;
+    border-top: 2px solid #667eea;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.wire-search {
+    border: 2px solid #dee2e6;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.wire-filter-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 10px;
+}
+
+.wire-chip {
+    padding: 6px 12px;
+    border: 2px solid #dee2e6;
+    border-radius: 16px;
+    font-size: 0.8em;
+    color: #495057;
+    background: white;
+}
+
+.wire-chip-active {
+    padding: 6px 12px;
+    border: 2px solid #667eea;
+    border-radius: 16px;
+    font-size: 0.8em;
+    color: #667eea;
+    background: #f0f4ff;
+    font-weight: 600;
+}
+
+.wire-active-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.wire-text-link {
+    color: #667eea;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wire-annotation {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    right: 20px;
+    background: #fff8e1;
+    border: 2px solid #ffc107;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.85em;
+    color: #f57c00;
+    font-weight: 600;
+}
+
+.wire-annotation.success {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.iteration-description {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .wireframe-comparison {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -873,42 +1106,205 @@
             </ol>
             
             <h3>Early Design Screens & Design Decisions</h3>
-            
-            <div class="before-after">
-                <div class="design-screen">
-                    <h4>Before: Initial Comparison Flow</h4>
-                    <div class="image-placeholder" style="height: 300px;">
-                        [Insert Before Screenshot]
-                    </div>
-                    <p style="margin-top: 15px;"><strong>Issue:</strong> Users struggled to find the comparison feature; limited to 3 vehicles only</p>
+
+<!-- Iteration 1: Comparison Flow -->
+<div class="design-iteration">
+    <h4>Design Iteration 1: Comparison Flow Enhancement</h4>
+    
+    <div class="wireframe-comparison">
+        <!-- Before -->
+        <div class="wireframe-container">
+            <div class="wireframe-label before">BEFORE</div>
+            <div class="wireframe-box">
+                <!-- Header -->
+                <div class="wire-header">
+                    <div class="wire-text" style="width: 60px; height: 12px;"></div>
+                    <div class="wire-menu"></div>
                 </div>
                 
-                <div class="design-screen">
-                    <h4>After: Redesigned Comparison</h4>
-                    <div class="image-placeholder" style="height: 300px;">
-                        [Insert After Screenshot]
-                    </div>
-                    <p style="margin-top: 15px;"><strong>Solution:</strong> Added prominent comparison CTA; expanded to support more vehicles; improved spec visibility</p>
+                <!-- Vehicle Cards -->
+                <div class="wire-card">
+                    <div class="wire-image"></div>
+                    <div class="wire-text" style="width: 120px; height: 15px; margin: 10px 0;"></div>
+                    <div class="wire-text" style="width: 80px; height: 12px;"></div>
+                    <div class="wire-text" style="width: 100px; height: 12px; margin-top: 5px;"></div>
+                    <div class="wire-button-subtle" style="margin-top: 15px;">View Details</div>
+                </div>
+                
+                <div class="wire-card">
+                    <div class="wire-image"></div>
+                    <div class="wire-text" style="width: 120px; height: 15px; margin: 10px 0;"></div>
+                    <div class="wire-text" style="width: 80px; height: 12px;"></div>
+                    <div class="wire-text" style="width: 100px; height: 12px; margin-top: 5px;"></div>
+                    <div class="wire-button-subtle" style="margin-top: 15px;">View Details</div>
+                </div>
+                
+                <div class="wire-annotation">
+                    ❌ Comparison feature hidden in dropdown menu
                 </div>
             </div>
             
-            <div class="before-after">
-                <div class="design-screen">
-                    <h4>Before: Filter Interface</h4>
-                    <div class="image-placeholder" style="height: 300px;">
-                        [Insert Before Screenshot]
-                    </div>
-                    <p style="margin-top: 15px;"><strong>Issue:</strong> Filter discoverability was low; users didn't notice available options</p>
+            <div class="iteration-description">
+                <strong>Issue:</strong> Users struggled to find comparison feature; limited to 3 vehicles only
+            </div>
+        </div>
+        
+        <!-- After -->
+        <div class="wireframe-container">
+            <div class="wireframe-label after">AFTER</div>
+            <div class="wireframe-box">
+                <!-- Header -->
+                <div class="wire-header">
+                    <div class="wire-text" style="width: 60px; height: 12px;"></div>
+                    <div class="wire-menu"></div>
                 </div>
                 
-                <div class="design-screen">
-                    <h4>After: Enhanced Filters</h4>
-                    <div class="image-placeholder" style="height: 300px;">
-                        [Insert After Screenshot]
+                <!-- Vehicle Cards with Compare Button -->
+                <div class="wire-card">
+                    <div class="wire-image"></div>
+                    <div class="wire-text" style="width: 120px; height: 15px; margin: 10px 0;"></div>
+                    <div class="wire-text" style="width: 80px; height: 12px;"></div>
+                    <div class="wire-text" style="width: 100px; height: 12px; margin-top: 5px;"></div>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <div class="wire-button-subtle">View Details</div>
+                        <div class="wire-button-primary">+ Compare</div>
                     </div>
-                    <p style="margin-top: 15px;"><strong>Solution:</strong> Redesigned filter UI with better visual hierarchy and accessibility</p>
+                </div>
+                
+                <div class="wire-card">
+                    <div class="wire-image"></div>
+                    <div class="wire-text" style="width: 120px; height: 15px; margin: 10px 0;"></div>
+                    <div class="wire-text" style="width: 80px; height: 12px;"></div>
+                    <div class="wire-text" style="width: 100px; height: 12px; margin-top: 5px;"></div>
+                    <div style="display: flex; gap: 10px; margin-top: 15px;">
+                        <div class="wire-button-subtle">View Details</div>
+                        <div class="wire-button-primary">+ Compare</div>
+                    </div>
+                </div>
+                
+                <!-- Comparison Bar -->
+                <div class="wire-compare-bar">
+                    <div class="wire-text" style="width: 80px; height: 12px;"></div>
+                    <div class="wire-button-primary" style="margin-left: auto;">Compare Now (2)</div>
+                </div>
+                
+                <div class="wire-annotation success">
+                    ✓ Prominent compare button on each card + persistent comparison bar
                 </div>
             </div>
+            
+            <div class="iteration-description">
+                <strong>Solution:</strong> Added visible "Compare" CTA on cards; persistent bottom bar shows selected vehicles; supports unlimited comparisons
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Iteration 2: Filter Enhancement -->
+<div class="design-iteration">
+    <h4>Design Iteration 2: Filter Discoverability</h4>
+    
+    <div class="wireframe-comparison">
+        <!-- Before -->
+        <div class="wireframe-container">
+            <div class="wireframe-label before">BEFORE</div>
+            <div class="wireframe-box">
+                <!-- Header with small filter icon -->
+                <div class="wire-header">
+                    <div class="wire-text" style="width: 60px; height: 12px;"></div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <div class="wire-icon-small">⚙</div>
+                        <div class="wire-menu"></div>
+                    </div>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="wire-search">
+                    <div class="wire-text" style="width: 150px; height: 12px;"></div>
+                </div>
+                
+                <!-- Results List -->
+                <div class="wire-text" style="width: 100px; height: 12px; margin: 15px 0 10px 0;">364 Results</div>
+                
+                <div class="wire-card-small">
+                    <div class="wire-image-small"></div>
+                    <div style="flex: 1;">
+                        <div class="wire-text" style="width: 120px; height: 12px;"></div>
+                        <div class="wire-text" style="width: 80px; height: 10px; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                
+                <div class="wire-card-small">
+                    <div class="wire-image-small"></div>
+                    <div style="flex: 1;">
+                        <div class="wire-text" style="width: 120px; height: 12px;"></div>
+                        <div class="wire-text" style="width: 80px; height: 10px; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                
+                <div class="wire-annotation">
+                    ❌ Filter icon hidden in top corner
+                </div>
+            </div>
+            
+            <div class="iteration-description">
+                <strong>Issue:</strong> Filter discoverability was low; users didn't notice the small icon
+            </div>
+        </div>
+        
+        <!-- After -->
+        <div class="wireframe-container">
+            <div class="wireframe-label after">AFTER</div>
+            <div class="wireframe-box">
+                <!-- Header -->
+                <div class="wire-header">
+                    <div class="wire-text" style="width: 60px; height: 12px;"></div>
+                    <div class="wire-menu"></div>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="wire-search">
+                    <div class="wire-text" style="width: 150px; height: 12px;"></div>
+                </div>
+                
+                <!-- Visible Filter Chips -->
+                <div class="wire-filter-section">
+                    <div class="wire-text" style="width: 40px; height: 10px; margin-right: 10px;">Filters:</div>
+                    <div class="wire-chip">Price Range</div>
+                    <div class="wire-chip">Body Type</div>
+                    <div class="wire-chip">Fuel Type</div>
+                    <div class="wire-chip">+ More</div>
+                    <div class="wire-text-link" style="margin-left: auto;">Clear All</div>
+                </div>
+                
+                <!-- Active Filters -->
+                <div class="wire-active-filters">
+                    <div class="wire-chip-active">SUV ×</div>
+                    <div class="wire-chip-active">$20k-$30k ×</div>
+                </div>
+                
+                <!-- Results List -->
+                <div class="wire-text" style="width: 100px; height: 12px; margin: 15px 0 10px 0;">27 Results</div>
+                
+                <div class="wire-card-small">
+                    <div class="wire-image-small"></div>
+                    <div style="flex: 1;">
+                        <div class="wire-text" style="width: 120px; height: 12px;"></div>
+                        <div class="wire-text" style="width: 80px; height: 10px; margin-top: 5px;"></div>
+                    </div>
+                </div>
+                
+                <div class="wire-annotation success">
+                    ✓ Visible filter chips with count badges + active filter display
+                </div>
+            </div>
+            
+            <div class="iteration-description">
+                <strong>Solution:</strong> Prominent filter chips below search; active filters shown with remove option; improved visual hierarchy
+            </div>
+        </div>
+    </div>
+</div>
             
             <h3>Usability Testing Methodology</h3>
             <p>Conducted summative usability testing with <strong>5 participants</strong> using a structured protocol:</p>
