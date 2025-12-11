@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Information App - UX Case Study | Zoey Zhang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+        
+        header .meta {
+            font-size: 1em;
+            opacity: 0.85;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 15px 0;
+        }
+        
+        nav li {
+            margin: 5px 15px;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
+        }
+        
+        section {
+            background: white;
+            margin: 40px auto;
+            padding: 60px 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.6em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .image-placeholder {
+            background: #e9ecef;
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 25px 0;
+            color: #6c757d;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .design-screen {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .design-screen h4 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        
+        .quote-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .quote-box .speaker {
+            font-style: normal;
+            font-weight: 600;
+            color: #f57c00;
+            margin-top: 10px;
+        }
+        
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .tool-tag {
+            background: #e7f3ff;
+            color: #0066cc;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .key-takeaways {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .key-takeaways li {
+            padding: 15px 15px 15px 45px;
+            margin: 15px 0;
+            background: #f0f4ff;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .key-takeaways li:before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 40px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Automotive Information App</h1>
+            <p class="subtitle">Empowering First-Time Car Buyers Through Comprehensive Research Tools</p>
+            <p class="meta">Master's Thesis Project | Northeastern University | Zoey Zhao</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#design">Design Process</a></li>
+            <li><a href="#testing">Usability Testing</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#takeaways">Takeaways</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="overview">
+            <h2>Project Overview</h2>
+            
+            <h3>Problem Statement</h3>
+            <div class="highlight-box">
+                <p><strong>First-time car buyers and international users struggle to find comprehensive, reliable automotive information in one place.</strong> Existing platforms like 汽车之家 (Autohome) and 懂车帝 (Dongchedi) offer fragmented experiences, forcing users to navigate multiple platforms to compare vehicles, read reviews, understand pricing, and locate dealers.</p>
+            </div>
+            
+            <h3>Project Objectives</h3>
+            <ul style="padding-left: 20px; margin-top: 20px;">
+                <li>Create a unified automotive information platform inspired by leading Chinese automotive apps</li>
+                <li>Address 315+ identified pain points from user research across international markets</li>
+                <li>Design intuitive task flows for vehicle search, comparison, reviews, pricing, and dealer information</li>
+                <li>Achieve high usability scores with first-time car buyers</li>
+            </ul>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Screens Designed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Main Task Flows</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">315+</div>
+                    <div class="stat-label">Pain Points Identified</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8.6/10</div>
+                    <div class="stat-label">Usability Score</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research">
+            <h2>User Research & Insights</h2>
+            
+            <h3>Research Methodology</h3>
+            <p>Conducted comprehensive user research across four international cities: <strong>Beijing, Edinburgh, Toronto, and Paris</strong>, interviewing participants to understand cross-market car research needs.</p>
+            
+            <div class="highlight-box">
+                <h4 style="margin-top: 0;">Key Research Activities</h4>
+                <ul style="padding-left: 20px; margin-top: 15px;">
+                    <li>User interviews with first-time car buyers and international users</li>
+                    <li>Competitive analysis of Autohome (汽车之家) and Dongchedi (懂车帝)</li>
+                    <li>Heuristic evaluation using Nielsen's 10 Usability Heuristics (50+ issues identified)</li>
+                    <li>Task analysis diagrams to map user workflows</li>
+                </ul>
+            </div>
+            
+            <h3>User Personas & Journey Maps</h3>
+            <p>Developed detailed user personas, journey maps, and usage scenarios based on international research participants, capturing pain points across the entire car-buying journey.</p>
+            
+            <div class="image-placeholder">
+                [Insert User Personas Here - Add images of your persona documents]
+            </div>
+            
+            <h3>Key Insights</h3>
+            <div class="quote-box">
+                "I wish I could compare cars side-by-side with all the specs visible at once, not just three models."
+                <div class="speaker">— Research Participant, Toronto</div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4 style="margin-top: 0;">From Pain Points to Requirements</h4>
+                <p>Transformed <strong>315+ user pain points</strong> into <strong>115+ organized UX requirements</strong>, creating a systematic foundation for design decisions throughout the project.</p>
+            </div>
+        </section>
+        
+        <section id="design">
+            <h2>Design Approach & Methodology</h2>
+            
+            <h3>Design Process</h3>
+            <p>Followed an iterative, user-centered design process incorporating AI tools at multiple stages:</p>
+            
+            <ol style="padding-left: 20px; margin: 20px 0;">
+                <li><strong>Low-Fidelity Wireframes:</strong> Created initial wireframes in Figma Make, learning valuable lessons about canvas structure and design metric specification</li>
+                <li><strong>Cognitive Walkthrough:</strong> Developed detailed protocols to evaluate task flows from users' perspectives</li>
+                <li><strong>High-Fidelity Prototypes:</strong> Built interactive prototypes covering five main task flows</li>
+                <li><strong>Usability Testing:</strong> Conducted summative testing with 5 participants</li>
+            </ol>
+            
+            <h3>Early Design Screens & Design Decisions</h3>
+            
+            <div class="before-after">
+                <div class="design-screen">
+                    <h4>Before: Initial Comparison Flow</h4>
+                    <div class="image-placeholder" style="height: 300px;">
+                        [Insert Before Screenshot]
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Issue:</strong> Users struggled to find the comparison feature; limited to 3 vehicles only</p>
+                </div>
+                
+                <div class="design-screen">
+                    <h4>After: Redesigned Comparison</h4>
+                    <div class="image-placeholder" style="height: 300px;">
+                        [Insert After Screenshot]
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Solution:</strong> Added prominent comparison CTA; expanded to support more vehicles; improved spec visibility</p>
+                </div>
+            </div>
+            
+            <div class="before-after">
+                <div class="design-screen">
+                    <h4>Before: Filter Interface</h4>
+                    <div class="image-placeholder" style="height: 300px;">
+                        [Insert Before Screenshot]
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Issue:</strong> Filter discoverability was low; users didn't notice available options</p>
+                </div>
+                
+                <div class="design-screen">
+                    <h4>After: Enhanced Filters</h4>
+                    <div class="image-placeholder" style="height: 300px;">
+                        [Insert After Screenshot]
+                    </div>
+                    <p style="margin-top: 15px;"><strong>Solution:</strong> Redesigned filter UI with better visual hierarchy and accessibility</p>
+                </div>
+            </div>
+            
+            <h3>Usability Testing Methodology</h3>
+            <p>Conducted summative usability testing with <strong>5 participants</strong> using a structured protocol:</p>
+            
+            <ul style="padding-left: 20px; margin: 20px 0;">
+                <li>Task-based scenarios covering all 5 main user flows</li>
+                <li>Think-aloud protocol to capture real-time feedback</li>
+                <li>Post-task questionnaires and System Usability Scale (SUS)</li>
+                <li>Session recordings analyzed with AI tools (Otter.ai, Gemini)</li>
+            </ul>
+        </section>
+        
+        <section id="testing">
+            <h2>Usability Testing Insights</h2>
+            
+            <h3>Testing Results</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Task Success Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8.6/10</div>
+                    <div class="stat-label">Average Usability Score</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Participants Tested</div>
+                </div>
+            </div>
+            
+            <h3>User Feedback Snippets</h3>
+            
+            <div class="quote-box">
+                "The search functionality is intuitive, but I had to look around to find the comparison feature."
+                <div class="speaker">— Participant 2</div>
+            </div>
+            
+            <div class="quote-box">
+                "I love how all the information is in one place. Much better than switching between websites!"
+                <div class="speaker">— Participant 4</div>
+            </div>
+            
+            <div class="quote-box">
+                "The filters could be more visible. I almost missed them when searching for specific features."
+                <div class="speaker">— Participant 1</div>
+            </div>
+            
+            <div class="image-placeholder">
+                [Insert Video Snippet or Dovetail Extraction Screenshot Here]
+                <p style="margin-top: 15px;">Add clips from your usability testing sessions showing user interactions</p>
+            </div>
+            
+            <h3>Impact on Design</h3>
+            <div class="highlight-box">
+                <h4 style="margin-top: 0;">Key Design Improvements Based on Testing</h4>
+                <ul style="padding-left: 20px; margin-top: 15px;">
+                    <li><strong>Comparison Flow:</strong> Made comparison CTA more prominent; redesigned comparison table for better readability</li>
+                    <li><strong>Filter Discoverability:</strong> Enhanced visual hierarchy; added filter count badges; improved mobile accessibility</li>
+                    <li><strong>Navigation:</strong> Streamlined menu structure based on user mental models</li>
+                    <li><strong>Information Architecture:</strong> Reorganized content hierarchy based on user priorities</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="solution">
+            <h2>Solution Overview & Demo</h2>
+            
+            <h3>Final Product</h3>
+            <p>A comprehensive automotive information app featuring 14 screens across five main task flows:</p>
+            
+            <ol style="padding-left: 20px; margin: 20px 0;">
+                <li><strong>Vehicle Search:</strong> Advanced filtering and search capabilities</li>
+                <li><strong>Comparison:</strong> Side-by-side vehicle comparisons with detailed specs</li>
+                <li><strong>Reviews:</strong> User-generated and expert reviews with ratings</li>
+                <li><strong>Pricing:</strong> Transparent pricing information and local market data</li>
+                <li><strong>Dealer Information:</strong> Dealer locations, inventory, and contact details</li>
+            </ol>
+            
+            <div class="image-placeholder" style="height: 400px;">
+                [Insert Final Prototype Screenshots or Demo Video Here]
+                <p style="margin-top: 15px;">Add your final high-fidelity screens or embedded prototype link</p>
+            </div>
+            
+            <h3>Key Features</h3>
+            <div class="highlight-box">
+                <ul style="padding-left: 20px;">
+                    <li>Unified platform consolidating fragmented information sources</li>
+                    <li>Intuitive comparison tools for multiple vehicles simultaneously</li>
+                    <li>Localized content for international markets</li>
+                    <li>Comprehensive review system combining expert and user feedback</li>
+                    <li>Real-time pricing and dealer inventory</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="impact">
+            <h2>Outcome & Impact</h2>
+            
+            <h3>Quantitative Findings</h3>
+            
+            <div class="image-placeholder">
+                [Insert AI-Generated Visualization #1: Task Success Rates by Flow]
+                <p style="margin-top: 15px;">Add your charts from Gemini/ChatGPT analysis</p>
+            </div>
+            
+            <div class="image-placeholder">
+                [Insert AI-Generated Visualization #2: Usability Scores Breakdown]
+                <p style="margin-top: 15px;">Add your usability score visualizations</p>
+            </div>
+            
+            <div class="image-placeholder">
+                [Insert AI-Generated Visualization #3: Pain Points Before/After]
+                <p style="margin-top: 15px;">Add your pain point reduction charts</p>
+            </div>
+            
+            <h3>Qualitative Impact</h3>
+            <div class="highlight-box">
+                <p><strong>User feedback indicated strong preference for the unified platform approach,</strong> with participants noting significant time savings compared to using multiple automotive websites. The design successfully addressed the majority of the 315+ original pain points identified in research.</p>
+            </div>
+        </section>
+        
+        <section id="takeaways">
+            <h2>Key Takeaways & Reflections</h2>
+            
+            <h3>Design Learnings</h3>
+            <ul class="key-takeaways">
+                <li><strong>Comparison flow discoverability is critical:</strong> Even with 100% task success, users struggled initially to find comparison features, highlighting the need for prominent CTAs</li>
+                <li><strong>Filter visibility drives exploration:</strong> Hidden or subtle filters significantly reduce feature discovery; filters need prominent placement</li>
+                <li><strong>Cross-cultural design considerations:</strong> Research across multiple markets revealed both universal pain points and culture-specific preferences</li>
+                <li><strong>Iterative testing reveals hidden issues:</strong> Issues that seemed minor in wireframes became significant pain points during usability testing</li>
+            </ul>
+            
+            <h3>Future Design Improvements</h3>
+            <ul style="padding-left: 20px; margin: 20px 0;">
+                <li>Enhanced comparison table with customizable columns</li>
+                <li>AI-powered vehicle recommendations based on user preferences</li>
+                <li>Integration with financing and insurance platforms</li>
+                <li>Advanced filter presets for common user scenarios</li>
+                <li>Expanded dealer rating and review system</li>
+            </ul>
+            
+            <h3>AI Tools Used Throughout the Project</h3>
+            <div class="tool-tags">
+                <span class="tool-tag">Otter.ai - Transcription</span>
+                <span class="tool-tag">Gemini - Data Analysis</span>
+                <span class="tool-tag">ChatGPT - Content & Analysis</span>
+                <span class="tool-tag">Claude - Research Synthesis</span>
+                <span class="tool-tag">Figma Make - Wireframing</span>
+            </div>
+            
+            <h3>Reflections on AI Effectiveness</h3>
+            <div class="highlight-box">
+                <p><strong>AI tools significantly accelerated the research and analysis phases.</strong> Otter.ai enabled rapid transcription of 5 usability testing sessions, while Gemini and ChatGPT helped identify patterns across hundreds of pain points. However, human judgment remained essential for interpreting nuanced user feedback and making final design decisions. The combination of AI efficiency and human insight proved most effective.</p>
+                
+                <p style="margin-top: 15px;"><strong>Key lesson:</strong> AI tools excel at processing and organizing large datasets, but UX designers must provide the strategic direction and empathetic interpretation that defines excellent user experiences.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <h3 style="color: white; margin-bottom: 15px;">Interested in Learning More?</h3>
+            <p>Thank you for reviewing this case study. I'd love to discuss this project in more detail.</p>
+            <a href="mailto:zoey42zhang@gmail.com" class="cta-button">Get in Touch</a>
+            <p style="margin-top: 30px; opacity: 0.7;">© 2025 Zoey Zhang | Northeastern University</p>
+        </div>
+    </footer>
+</body>
+</html>
