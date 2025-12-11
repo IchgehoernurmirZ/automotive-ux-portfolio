@@ -240,6 +240,86 @@
         .cta-button:hover {
             transform: translateY(-2px);
         }
+
+         .personas-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                    gap: 30px;
+                    margin: 30px 0;
+                }
+                
+                .persona-card {
+                    background: #f8f9fa;
+                    border-radius: 12px;
+                    padding: 30px;
+                    border: 2px solid #e9ecef;
+                }
+                
+                .persona-header {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 2px solid #dee2e6;
+                }
+                
+                .persona-basic h4 {
+                    color: #667eea;
+                    font-size: 1.5em;
+                    margin: 0 0 5px 0;
+                }
+                
+                .persona-title {
+                    font-weight: 600;
+                    color: #495057;
+                    margin: 0 0 5px 0;
+                }
+                
+                .persona-demo {
+                    color: #6c757d;
+                    font-size: 0.9em;
+                    margin: 0;
+                }
+                
+                .persona-section {
+                    margin: 20px 0;
+                }
+                
+                .persona-quote {
+                    background: #fff8e1;
+                    border-left: 4px solid #ffc107;
+                    padding: 15px;
+                    font-style: italic;
+                    color: #495057;
+                    margin: 0;
+                }
+                
+                .persona-section strong {
+                    color: #764ba2;
+                    font-size: 1.05em;
+                }
+                
+                .persona-section ul {
+                    margin-top: 10px;
+                    padding-left: 20px;
+                }
+                
+                .persona-section li {
+                    margin: 8px 0;
+                    color: #495057;
+                }
+                
+                @media (max-width: 768px) {
+                    .personas-container {
+                        grid-template-columns: 1fr;
+                    }
+                    
+                    .persona-header {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                }
         
         @media (max-width: 768px) {
             header h1 {
@@ -254,6 +334,111 @@
                 padding: 40px 25px;
             }
         }
+
+        /* Journey Map Styles */
+.journey-map-container {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+}
+
+.journey-map-title {
+    color: #764ba2;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #764ba2;
+}
+
+.journey-stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.journey-stage {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.stage-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stage-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+.stage-header h5 {
+    color: #495057;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.stage-content p {
+    margin: 10px 0;
+    font-size: 0.95em;
+    color: #495057;
+}
+
+.stage-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    font-size: 0.9em;
+}
+
+.stage-content li {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+.pain-point {
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+    padding: 10px;
+    margin-top: 15px !important;
+    font-size: 0.9em !important;
+    border-radius: 4px;
+}
+
+.opportunity-bar {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+@media (max-width: 1024px) {
+    .journey-stages {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .journey-stages {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -476,87 +661,188 @@
                 </div>
             </div>
 
-             <style>
-                .personas-container {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                    gap: 30px;
-                    margin: 30px 0;
-                }
-                
-                .persona-card {
-                    background: #f8f9fa;
-                    border-radius: 12px;
-                    padding: 30px;
-                    border: 2px solid #e9ecef;
-                }
-                
-                .persona-header {
-                    display: flex;
-                    gap: 20px;
-                    align-items: center;
-                    margin-bottom: 20px;
-                    padding-bottom: 20px;
-                    border-bottom: 2px solid #dee2e6;
-                }
-                
-                .persona-basic h4 {
-                    color: #667eea;
-                    font-size: 1.5em;
-                    margin: 0 0 5px 0;
-                }
-                
-                .persona-title {
-                    font-weight: 600;
-                    color: #495057;
-                    margin: 0 0 5px 0;
-                }
-                
-                .persona-demo {
-                    color: #6c757d;
-                    font-size: 0.9em;
-                    margin: 0;
-                }
-                
-                .persona-section {
-                    margin: 20px 0;
-                }
-                
-                .persona-quote {
-                    background: #fff8e1;
-                    border-left: 4px solid #ffc107;
-                    padding: 15px;
-                    font-style: italic;
-                    color: #495057;
-                    margin: 0;
-                }
-                
-                .persona-section strong {
-                    color: #764ba2;
-                    font-size: 1.05em;
-                }
-                
-                .persona-section ul {
-                    margin-top: 10px;
-                    padding-left: 20px;
-                }
-                
-                .persona-section li {
-                    margin: 8px 0;
-                    color: #495057;
-                }
-                
-                @media (max-width: 768px) {
-                    .personas-container {
-                        grid-template-columns: 1fr;
-                    }
-                    
-                    .persona-header {
-                        flex-direction: column;
-                        text-align: center;
-                    }
-                }
-            </style>
+            <h3 style="margin-top: 50px;">Journey Maps</h3>
+<p>Mapped the complete car-buying journey for each persona, identifying pain points and opportunities at every stage.</p>
+
+<!-- Journey Map for Mei Lin -->
+<div class="journey-map-container">
+    <h4 class="journey-map-title">Mei Lin's Car Buying Journey</h4>
+    
+    <div class="journey-stages">
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">1</div>
+                <h5>Initial Research</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Google searches for "best first car Canada"</li>
+                    <li>Visits multiple automotive websites</li>
+                    <li>Asks friends for recommendations</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "Where do I even start? Everything is in English and uses terms I don't know."</p>
+                <p class="pain-point">😟 Pain Point: Information overwhelm, unfamiliar terminology</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">2</div>
+                <h5>Comparison</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Opens 10+ browser tabs</li>
+                    <li>Creates spreadsheet to track options</li>
+                    <li>Struggles to compare specs across sites</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "Why can't I see all the cars side-by-side like on 汽车之家?"</p>
+                <p class="pain-point">😟 Pain Point: No unified comparison tool, data fragmentation</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">3</div>
+                <h5>Reviews Research</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Reads reviews on multiple platforms</li>
+                    <li>Searches for winter driving experiences</li>
+                    <li>Looks for international buyer perspectives</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "Are these reviews real? I need to hear from other international students."</p>
+                <p class="pain-point">😟 Pain Point: Review authenticity unclear, no filters for user type</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">4</div>
+                <h5>Pricing & Dealers</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Checks prices on different sites - all different</li>
+                    <li>Searches for nearby dealers</li>
+                    <li>Tries to understand financing options</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "Which price is correct? What are the hidden costs?"</p>
+                <p class="pain-point">😟 Pain Point: Inconsistent pricing, unclear total costs</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">5</div>
+                <h5>Decision</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Feels overwhelmed, delays decision</li>
+                    <li>Revisits same websites multiple times</li>
+                    <li>Eventually picks based on friend's advice</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "I spent weeks on this and still feel uncertain about my choice."</p>
+                <p class="pain-point">😟 Pain Point: Decision paralysis, lack of confidence</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="opportunity-bar">
+        💡 <strong>Opportunity:</strong> Create a unified platform with side-by-side comparisons, verified reviews, transparent pricing, and multilingual support for international buyers.
+    </div>
+</div>
+
+<!-- Journey Map for James -->
+<div class="journey-map-container">
+    <h4 class="journey-map-title">James Morrison's Car Buying Journey</h4>
+    
+    <div class="journey-stages">
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">1</div>
+                <h5>Research Planning</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Creates criteria list (budget, fuel efficiency, safety)</li>
+                    <li>Researches top-rated models in price range</li>
+                    <li>Plans systematic comparison approach</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "I'll treat this like an investment analysis - data-driven and thorough."</p>
+                <p class="pain-point">😟 Pain Point: Limited comparison capabilities (max 3 cars)</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">2</div>
+                <h5>Detailed Analysis</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Builds Excel spreadsheet with 8+ models</li>
+                    <li>Manually inputs specs from different websites</li>
+                    <li>Calculates total cost of ownership</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "Why isn't there a tool that does this automatically?"</p>
+                <p class="pain-point">😟 Pain Point: No comprehensive TCO calculator, manual data entry</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">3</div>
+                <h5>Validation</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Cross-checks prices on 5+ websites</li>
+                    <li>Reads expert and user reviews</li>
+                    <li>Verifies dealer ratings</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "These prices don't match. Which source is reliable?"</p>
+                <p class="pain-point">😟 Pain Point: Price inconsistencies, unverified reviews</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">4</div>
+                <h5>Dealer Contact</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Searches for dealers in Edinburgh</li>
+                    <li>Checks dealer reviews on separate sites</li>
+                    <li>Contacts 3-4 dealers for quotes</li>
+                </ul>
+                <p><strong>Thoughts:</strong> "I wish I could see inventory and get quotes online."</p>
+                <p class="pain-point">😟 Pain Point: No real-time inventory, must contact dealers individually</p>
+            </div>
+        </div>
+        
+        <div class="journey-stage">
+            <div class="stage-header">
+                <div class="stage-number">5</div>
+                <h5>Final Decision</h5>
+            </div>
+            <div class="stage-content">
+                <p><strong>Actions:</strong></p>
+                <ul>
+                    <li>Reviews all collected data</li>
+                    <li>Negotiates with preferred dealer</li>
             
             <h3>Key Insights</h3>
             <div class="quote-box">
