@@ -694,9 +694,11 @@
 
 .dovetail-image img {
     width: 100%;
-    height: auto;
+    max-height: 500px; /* Limits height */
+    object-fit: contain; /* Keeps aspect ratio */
     border-radius: 6px;
     display: block;
+    border: 1px solid #dee2e6;
 }
 
 .image-caption {
