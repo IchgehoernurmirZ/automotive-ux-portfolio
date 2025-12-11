@@ -675,6 +675,43 @@
         grid-template-columns: 1fr;
     }
 }
+        
+/* Dovetail Screenshots */
+.dovetail-screenshots {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.dovetail-image {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.dovetail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.image-caption {
+    margin-top: 12px;
+    font-size: 0.9em;
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .dovetail-screenshots {
+        grid-template-columns: 1fr 1fr;
+    }
+}
     </style>
 </head>
 <body>
