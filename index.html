@@ -714,6 +714,295 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+        /* Visualization Styles */
+.visualization-container {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 35px;
+    margin: 35px 0;
+}
+
+.visualization-container h4 {
+    color: #764ba2;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.viz-subtitle {
+    color: #6c757d;
+    font-size: 0.95em;
+    margin-bottom: 25px;
+}
+
+/* Task Success Chart */
+.task-success-chart {
+    margin: 25px 0;
+}
+
+.task-bar {
+    margin-bottom: 20px;
+}
+
+.task-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.task-name {
+    font-weight: 600;
+    color: #495057;
+}
+
+.task-percent {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.progress-bar {
+    background: #e9ecef;
+    height: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+    height: 100%;
+    transition: width 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Usability Scores */
+.usability-scores {
+    margin: 25px 0;
+}
+
+.score-card-viz {
+    margin-bottom: 18px;
+}
+
+.participant-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.score-visual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.score-bar {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    height: 28px;
+    border-radius: 6px;
+    transition: width 1s ease;
+}
+
+.score-number {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.1em;
+    min-width: 40px;
+}
+
+.score-average {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 35px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.average-circle {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.average-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.average-label {
+    font-size: 0.8em;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.score-interpretation {
+    flex: 1;
+}
+
+/* Before/After Visualization */
+.before-after-viz {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.pain-column {
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.column-header {
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.column-header h5 {
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+}
+
+.before-header {
+    background: linear-gradient(135deg, #dc3545 0%, #c92a2a 100%);
+}
+
+.after-header {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.big-number {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.column-header p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.pain-list {
+    padding: 20px;
+}
+
+.pain-item, .solution-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.pain-item {
+    background: #fff3cd;
+    border-left: 3px solid #ffc107;
+    color: #856404;
+}
+
+.solution-item {
+    background: #d4edda;
+    border-left: 3px solid #28a745;
+    color: #155724;
+}
+
+.arrow-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.transform-arrow {
+    font-size: 3em;
+    color: #667eea;
+    font-weight: 700;
+}
+
+.transform-text {
+    text-align: center;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.impact-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.metric-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.metric-label {
+    font-size: 0.9em;
+    opacity: 0.95;
+}
+
+.insight-box {
+    background: #e7f3ff;
+    border-left: 4px solid #0066cc;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .before-after-viz {
+        grid-template-columns: 1fr;
+    }
+    
+    .arrow-middle {
+        transform: rotate(90deg);
+        padding: 15px 0;
+    }
+    
+    .impact-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .score-average {
+        flex-direction: column;
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -1454,21 +1743,196 @@
             <h2>Outcome & Impact</h2>
             
             <h3>Quantitative Findings</h3>
-            
-            <div class="image-placeholder">
-                [Insert AI-Generated Visualization #1: Task Success Rates by Flow]
-                <p style="margin-top: 15px;">Add your charts from Gemini/ChatGPT analysis</p>
+
+<!-- Visualization 1: Task Success Rates -->
+<div class="visualization-container">
+    <h4>Task Success Rates by Flow</h4>
+    <p class="viz-subtitle">All participants successfully completed tasks across the 5 main user flows</p>
+    
+    <div class="task-success-chart">
+        <div class="task-bar">
+            <div class="task-label">
+                <span class="task-name">Vehicle Search</span>
+                <span class="task-percent">100%</span>
             </div>
-            
-            <div class="image-placeholder">
-                [Insert AI-Generated Visualization #2: Usability Scores Breakdown]
-                <p style="margin-top: 15px;">Add your usability score visualizations</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
             </div>
-            
-            <div class="image-placeholder">
-                [Insert AI-Generated Visualization #3: Pain Points Before/After]
-                <p style="margin-top: 15px;">Add your pain point reduction charts</p>
+        </div>
+        
+        <div class="task-bar">
+            <div class="task-label">
+                <span class="task-name">Vehicle Comparison</span>
+                <span class="task-percent">100%</span>
             </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="task-bar">
+            <div class="task-label">
+                <span class="task-name">Review Reading</span>
+                <span class="task-percent">100%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="task-bar">
+            <div class="task-label">
+                <span class="task-name">Pricing Information</span>
+                <span class="task-percent">100%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="task-bar">
+            <div class="task-label">
+                <span class="task-name">Dealer Locator</span>
+                <span class="task-percent">100%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="insight-box">
+        <strong>Key Finding:</strong> Achieved 100% task completion rate across all 5 participants and all user flows, demonstrating intuitive design and clear information architecture.
+    </div>
+</div>
+
+<!-- Visualization 2: Usability Scores -->
+<div class="visualization-container">
+    <h4>System Usability Scale (SUS) Scores</h4>
+    <p class="viz-subtitle">Average score: 8.6/10 across 5 participants</p>
+    
+    <div class="usability-scores">
+        <div class="score-card-viz">
+            <div class="participant-label">Participant 1</div>
+            <div class="score-visual">
+                <div class="score-bar" style="width: 90%;"></div>
+                <span class="score-number">9.0</span>
+            </div>
+        </div>
+        
+        <div class="score-card-viz">
+            <div class="participant-label">Participant 2</div>
+            <div class="score-visual">
+                <div class="score-bar" style="width: 80%;"></div>
+                <span class="score-number">8.0</span>
+            </div>
+        </div>
+        
+        <div class="score-card-viz">
+            <div class="participant-label">Participant 3</div>
+            <div class="score-visual">
+                <div class="score-bar" style="width: 88%;"></div>
+                <span class="score-number">8.8</span>
+            </div>
+        </div>
+        
+        <div class="score-card-viz">
+            <div class="participant-label">Participant 4</div>
+            <div class="score-visual">
+                <div class="score-bar" style="width: 85%;"></div>
+                <span class="score-number">8.5</span>
+            </div>
+        </div>
+        
+        <div class="score-card-viz">
+            <div class="participant-label">Participant 5</div>
+            <div class="score-visual">
+                <div class="score-bar" style="width: 87%;"></div>
+                <span class="score-number">8.7</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="score-average">
+        <div class="average-circle">
+            <div class="average-number">8.6</div>
+            <div class="average-label">Average Score</div>
+        </div>
+        <div class="score-interpretation">
+            <p><strong>Interpretation:</strong> Scores above 8.0 indicate excellent usability. The consistent high scores across all participants validate the design's effectiveness.</p>
+        </div>
+    </div>
+    
+    <div class="insight-box">
+        <strong>Key Finding:</strong> All participants rated the system above 8.0, with an average of 8.6/10, indicating strong user satisfaction and intuitive design.
+    </div>
+</div>
+
+<!-- Visualization 3: Pain Points Reduction -->
+<div class="visualization-container">
+    <h4>Pain Points: Before vs. After</h4>
+    <p class="viz-subtitle">Transformation of user pain points through design solutions</p>
+    
+    <div class="before-after-viz">
+        <div class="pain-column">
+            <div class="column-header before-header">
+                <h5>Before Design</h5>
+                <div class="big-number">315+</div>
+                <p>Identified Pain Points</p>
+            </div>
+            <div class="pain-list">
+                <div class="pain-item">❌ Information scattered across multiple platforms</div>
+                <div class="pain-item">❌ Limited to 3 vehicle comparisons</div>
+                <div class="pain-item">❌ Hidden filter options</div>
+                <div class="pain-item">❌ Inconsistent pricing data</div>
+                <div class="pain-item">❌ Unverified reviews</div>
+                <div class="pain-item">❌ No saved searches</div>
+                <div class="pain-item">❌ Poor mobile experience</div>
+            </div>
+        </div>
+        
+        <div class="arrow-middle">
+            <div class="transform-arrow">→</div>
+            <div class="transform-text">Design<br>Solutions</div>
+        </div>
+        
+        <div class="pain-column">
+            <div class="column-header after-header">
+                <h5>After Design</h5>
+                <div class="big-number">115</div>
+                <p>UX Requirements Met</p>
+            </div>
+            <div class="pain-list">
+                <div class="solution-item">✓ Unified platform with all information</div>
+                <div class="solution-item">✓ Unlimited vehicle comparisons</div>
+                <div class="solution-item">✓ Prominent, accessible filters</div>
+                <div class="solution-item">✓ Consistent, transparent pricing</div>
+                <div class="solution-item">✓ Verified review system</div>
+                <div class="solution-item">✓ Saved search functionality</div>
+                <div class="solution-item">✓ Responsive mobile design</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="impact-metrics">
+        <div class="metric-card">
+            <div class="metric-number">63%</div>
+            <div class="metric-label">Pain Points Addressed</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number">100%</div>
+            <div class="metric-label">Critical Issues Resolved</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-number">8.6/10</div>
+            <div class="metric-label">User Satisfaction</div>
+        </div>
+    </div>
+    
+    <div class="insight-box">
+        <strong>Key Finding:</strong> Converted 315+ pain points into 115 actionable UX requirements, addressing the majority of critical user frustrations and achieving high satisfaction scores.
+    </div>
+</div>
             
             <h3>Qualitative Impact</h3>
             <div class="highlight-box">
